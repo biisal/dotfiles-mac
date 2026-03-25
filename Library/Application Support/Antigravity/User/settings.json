@@ -1,0 +1,253 @@
+{
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#c0caf5",
+    "editorCursor.background": "#090B17",
+    "statusBarItem.errorBackground": "#c0caf5",
+    "statusBar.background": "#005f5f",
+    "statusBar.noFolderBackground": "#005f5f",
+    "statusBar.debuggingBackground": "#005f5f",
+    "statusBar.foreground": "#ffffff",
+    "statusBar.debuggingForeground": "#ffffff",
+    "terminal.background": "#00000000"
+  },
+  "editor.fontSize": 17,
+  "editor.fontFamily": "Iosevka Nerd Font Mono",
+  "editor.fontWeight": "500",
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.incsearch": true,
+  "vim.smartcase": true,
+  "vim.ignorecase": true,
+  "editor.lineNumbers": "relative",
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "p"
+      ],
+      "after": [
+        "P"
+      ]
+    }
+  ],
+  "vim.insertModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    },
+    {
+      "before": [
+        "J",
+        "J"
+      ],
+      "after": [
+        "<Esc>"
+      ]
+    }
+  ],
+  "vim.leader": "<space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.quickTextSearch"
+      ],
+      "comment": "Open the new floating Quick Search"
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+      "comment": "Open the new floating Quick Search"
+    },
+    {
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ]
+    },
+    {
+      "before": [
+        ";"
+      ],
+      "after": [
+        ":"
+      ]
+    },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    {
+      "before": [
+        "<C-c>"
+      ],
+      "after": [
+        ":",
+        "%",
+        "y",
+        "+",
+        "<Enter>"
+      ]
+    },
+    {
+      "editor.cursorSmoothCaretAnimation": "on",
+      "editor.fontVariations": false
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.applyToAllProfiles": [],
+  "chat.commandCenter.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.tips.enabled": false,
+  "vim.enableNeovim": true,
+  "vim.highlightedyank.enable": true,
+  "vim.statusBarColors.commandlineinprogress": "",
+  "eslint.codeActionsOnSave.rules": null,
+  "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
+  "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "gopls": {
+    // "ui.diagnostic.staticcheck": true,
+    "ui.inlayhint.hints": {
+      "assignVariableTypes": true,
+      "compositeLiteralFields": true,
+      "compositeLiteralTypes": true,
+      "constantValues": true,
+      "functionTypeParameters": true,
+      "parameterNames": true,
+      "rangeVariableTypes": true
+    },
+    "analyses": {
+      "nilness": true,
+      "shadow": true,
+      "unusedparams": true,
+      "unusedwrite": true,
+      "useany": true,
+      "unusedvariable": true,
+      "nonewvars": true,
+      "noresultvalues": true
+    }
+  },
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.lintFlags": [
+    "--enable=govet",
+    "--fast"
+  ],
+  "codeium.enableExplainProblem": false,
+  "codeium.enableCodeLens": false,
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.visualline": "",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": false,
+  "codeium.enableConfig": {
+    "*": true,
+    "markdown": true
+  },
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": "off",
+  "editor.inlineSuggest.edits.allowCodeShifting": "never",
+  "editor.codeActionWidget.includeNearbyQuickFixes": false,
+  "editor.inlineSuggest.enabled": false,
+  "git.decorations.enabled": false,
+  "json.schemaDownload.enable": false,
+  "terminal.integrated.gpuAcceleration": "off",
+  "window.systemColorTheme": "dark",
+  "window.autoDetectColorScheme": false,
+  "window.titleBarStyle": "custom",
+  "accessibility.dimUnfocused.opacity": 0.2,
+  "emmet.includeLanguages": {
+    "templ": "html"
+  },
+  "explorer.fileNesting.enabled": false,
+  "search.smartCase": true,
+  "workbench.activityBar.location": "bottom",
+  "svelte.enable-ts-plugin": true,
+  "svelte.language-server.runtime": "bun",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "workbench.layoutControl.enabled": false,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "workbench.colorTheme": "Best Themes - One Monokai Darker",
+  "python.languageServer": "None",
+  // "basedpyright.analysis.typeCheckingMode": "strict",
+  "basedpyright.analysis.typeCheckingMode": "strict",
+  "basedpyright.analysis.inlayHints.variableTypes": true,
+  "basedpyright.analysis.inlayHints.functionReturnTypes": true,
+  "basedpyright.analysis.diagnosticSeverityOverrides": {
+    // --- Catch Dead Code (Unused variables, imports, etc.) ---
+    "reportUnusedImport": "error",
+    "reportUnusedVariable": "warning",
+    "reportUnusedClass": "warning",
+    "reportUnusedFunction": "warning",
+    "reportDuplicateImport": "error",
+    // --- Tone down the annoying 3rd-party library noise ---
+    "reportMissingTypeStubs": "none", // Stops yelling when libraries don't have type files
+    "reportUnknownMemberType": "warning", // Turns red squiggles into yellow for untyped library functions
+    "reportUnknownVariableType": "warning", // Yellow squiggles instead of red for inferred 'Any' types
+    "reportUnknownArgumentType": "warning"
+  },
+  "errorLens.excludeBySource": [
+    "Codeium",
+    "Windsurf",
+    "Cascade"
+  ],
+  "editor.inlayHints.enabled": "off",
+  "editor.codeActionWidget.showHeaders": false,
+  "pgFormatter.commaStart": true,
+  "pgFormatter.keepNewline": true,
+  "pgFormatter.wrapLimit": 40,
+}
