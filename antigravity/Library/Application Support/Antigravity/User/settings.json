@@ -10,7 +10,7 @@
     "statusBar.debuggingBackground": "#005f5f",
     "statusBar.foreground": "#ffffff",
     "statusBar.debuggingForeground": "#ffffff",
-    "terminal.background": "#00000000",
+    "terminal.background": "#00000000"
   },
   "editor.fontSize": 17,
   "editor.formatOnSave": true,

@@ -6,9 +6,9 @@
 export BUN_INSTALL="$HOME/.bun"
 [[ ":$PATH:" != *":$BUN_INSTALL/bin:"* ]] && export PATH="$BUN_INSTALL/bin:$PATH"
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # Shell integrations
@@ -34,12 +34,6 @@ zsh_add_plugin "Aloxaf/fzf-tab"
 # Load fzf keybindings 
 source <(fzf --zsh)
 
-# History
-HISTFILE="$HOME/.zsh_history"
-setopt APPEND_HISTORY      
-setopt SHARE_HISTORY
-HISTSIZE=10000       # Max lines in memory
-SAVEHIST=10000       # Max lines in the file
 
 # Keybindings
 bindkey '^E' autosuggest-accept
@@ -197,4 +191,11 @@ export PNPM_HOME="/Users/avisek/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+esac;
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=500000
+SAVEHIST=500000
+setopt appendhistory
+setopt INC_APPEND_HISTORY  
+setopt SHARE_HISTORY
