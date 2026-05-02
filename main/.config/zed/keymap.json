@@ -1,0 +1,63 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+	{
+		"context": "Workspace || VimControl",
+		"bindings": {
+			"cmd-p": "command_palette::Toggle",
+			"ctrl-h": "workspace::ActivatePaneLeft",
+			"ctrl-l": "workspace::ActivatePaneRight",
+		},
+	},
+	{
+		"context": "Editor && vim_mode == visual",
+		"bindings": {
+			"=": "editor::FormatSelections",
+		},
+	},
+	{
+		"context": "Workspace && !(vim_mode == insert) && !Terminal",
+		"bindings": {
+			"space f f": "file_finder::Toggle",
+		},
+	},
+	{
+		"context": "Editor || ProjectPanel",
+		"bindings": {
+			"ctrl-o": "project_panel::ToggleFocus",
+		},
+	},
+	{
+		"context": "Editor && VimControl && vim_mode == normal",
+		"bindings": {
+			"space d d": "diagnostics::Deploy",
+		},
+	},
+	{
+		"context": "Editor && vim_mode == insert",
+		"bindings": {
+			"j j": "vim::NormalBefore",
+			"shift-j shift-j": "vim::NormalBefore",
+		},
+	},
+	{
+		"context": "Editor && vim_mode == normal",
+		"bindings": {
+			";": "command_palette::Toggle",
+			"ctrl-c": ["workspace::SendKeystrokes", ": % y enter"],
+			// "ctrl-b": "workspace::ToggleLeftDock",
+			"ctrl-q": "pane::CloseActiveItem",
+		},
+	},
+	{
+		"context": "Editor && (vim_mode == visual || vim_mode == visual_line || vim_mode == visual_block)",
+		"bindings": {
+			"p": ["workspace::SendKeystrokes", "P"],
+		},
+	},
+]
