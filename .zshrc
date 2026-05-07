@@ -175,6 +175,7 @@ source "$HOME/.secrets.sh"
 alias ip='echo "Local: $(ipconfig getifaddr $(route get default | grep interface | awk '\''{print $2}'\''))"; echo "Public: $(curl -s https://ifconfig.me)"'
 alias tunnel='cloudflared tunnel run enhancci'
 eval "$(ty generate-shell-completion zsh)"
+alias grb="git ls-remote --heads origin"
 
 # Tipp
 export PATH="/Users/avisek/.tipp/bin:$PATH"

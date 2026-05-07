@@ -1,7 +1,9 @@
 {
   "workbench.colorCustomizations": {
-    "editor.background": "#101218",
-    "sideBar.background": "#1c1f29",
+    "[Tokyo Night Gogh]": {
+      "editor.background": "#101218",
+      "sideBar.background": "#1c1f29"
+    },
     "editorCursor.foreground": "#c0caf5",
     "editorCursor.background": "#090B17",
     "statusBarItem.errorBackground": "#c0caf5",

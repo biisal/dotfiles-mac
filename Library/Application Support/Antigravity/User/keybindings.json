@@ -1,0 +1,65 @@
+// Place your key bindings in this file to override the defaults
+[
+  //   {
+  //     "key": "tab",
+  //     "command": "editor.action.inlineSuggest.acceptNextLine",
+  //     "when": "inlineSuggestionVisible && !editorReadonly",
+  //   },
+  {
+    "key": "space f f",
+    "command": "workbench.action.quickOpen",
+    "when": "(!inputFocus && !antigravity.agentSidePanel.active) || activeEditorGroupEmpty",
+  },
+  {
+    "key": "enter",
+    "command": "list.toggleExpand",
+    "when": "filesExplorerFocus && explorerResourceIsFolder && !inputFocus",
+  },
+  {
+    "key": "enter",
+    "command": "runCommands",
+    "when": "filesExplorerFocus && !explorerResourceIsFolder && !inputFocus",
+    "args": {
+      "commands": ["list.select", "workbench.action.focusActiveEditorGroup"],
+    },
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusFirstEditorGroup",
+    "when": "filesExplorerFocus",
+  },
+  {
+    "key": "a",
+    "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "shift+a",
+    "command": "explorer.newFolder",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "d",
+    "command": "moveFileToTrash",
+    "when": "filesExplorerFocus && !inputFocus",
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.view.explorer",
+    "when": "editorTextFocus",
+  },
+  {
+    "key": "ctrl+o",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "sideBarFocus || explorerViewletFocus",
+  },
+  {
+    "key": "ctrl+b",
+    "command": "workbench.action.toggleSidebarVisibility",
+  },
+]
