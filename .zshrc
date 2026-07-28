@@ -6,9 +6,10 @@
 export BUN_INSTALL="$HOME/.bun"
 [[ ":$PATH:" != *":$BUN_INSTALL/bin:"* ]] && export PATH="$BUN_INSTALL/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 
 
 # Shell integrations
@@ -34,6 +35,8 @@ zsh_add_plugin "Aloxaf/fzf-tab"
 # Load fzf keybindings 
 source <(fzf --zsh)
 
+bindkey -v          # Enable Vim mode
+export KEYTIMEOUT=1
 
 # Keybindings
 bindkey '^E' autosuggest-accept
@@ -46,18 +49,19 @@ bindkey '^[[D' backward-char
 bindkey '^[[C' forward-char
 
 setopt PROMPT_SUBST
-PROMPT='%F{#66FF7E}%n%f@%m %F{#43C0FE}%~%f %F{#C39AFF}$(git_status)%f %B%F{#FF00E4}%f%b '
+PROMPT='%F{#a0a0a0}%n%f@%m %F{#e3e3e3}%~%f %F{#7da1a6}$(git_status)%f %F{#78dce8}%f '
+# PROMPT='%F{#66FF7E}%n%f@%m %F{#43C0FE}%~%f %F{#C39AFF}$(git_status)%f %B%F{#FF00E4}%f%b '
 
 
-
-dsa='docker stop $(docker ps -q)'
+alias dsa='docker stop $(docker ps -q)'
 alias dra='docker rm $(docker ps -a -q)'
 # alias note='nvim "$HOME/notes.md"'
 alias swag=${HOME}/go/bin/swag
 
 # opencode
 export PATH=/home/avisek/.opencode/bin:$PATH
-fastfetch
+# echo "Swami Vivekananda read 4 books in a day before his geometry exam" 
+# fastfetch
 
 
 mdn_logic() {
@@ -145,6 +149,7 @@ obs() {
 }
 
 alias ds=ds_logic
+alias d=d_logic
 alias p="nvim ~/pending.md"
 alias q="~/.scripts/search-ai.sh"
 alias ls='ls --color=auto'
@@ -172,7 +177,7 @@ relaod(){
 alias reload=relaod
 source "$HOME/.secrets.sh"
 
-alias ip='echo "Local: $(ipconfig getifaddr $(route get default | grep interface | awk '\''{print $2}'\''))"; echo "Public: $(curl -s https://ifconfig.me)"'
+# alias ip='echo "Local: $(ipconfig getifaddr $(route get default | grep interface | awk '\''{print $2}'\''))"; echo "Public: $(curl -s https://ifconfig.me)"'
 alias tunnel='cloudflared tunnel run enhancci'
 eval "$(ty generate-shell-completion zsh)"
 alias grb="git ls-remote --heads origin"
@@ -195,8 +200,60 @@ case ":$PATH:" in
 esac;
 
 HISTFILE="$HOME/.zsh_history"
-HISTSIZE=500000
-SAVEHIST=500000
-setopt appendhistory
-setopt INC_APPEND_HISTORY  
+HISTSIZE=5000
+SAVEHIST=5000
 setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_REDUCE_BLANKS
+
+source <(docker completion zsh)
+
+# Added by Antigravity IDE
+export PATH="/Users/avisek/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+
+# Added by Antigravity CLI installer
+export PATH="/Users/avisek/.local/bin:$PATH"
+
+# Added by Antigravity IDE
+export PATH="/Users/avisek/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+alias agy=agy-ide
+
+
+
+
+export NVM_DIR="$HOME/.nvm"
+load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+lazy_load_node() {
+    unalias nvm node npm npx pnpm yarn 2>/dev/null || true
+    load_nvm
+}
+
+alias nvm='lazy_load_node && nvm'
+alias node='lazy_load_node && node'
+alias npm='lazy_load_node && npm'
+alias npx='lazy_load_node && npx'
+alias pnpm='lazy_load_node && pnpm'
+alias yarn='lazy_load_node && yarn'
+
+# opencode
+export PATH=/Users/avisek/.opencode/bin:$PATH
+
+# mimocode
+export PATH=/Users/avisek/.mimocode/bin:$PATH
+
+
+fpath=(~/.stripe $fpath)
+autoload -Uz compinit && compinit -i
+
+# proto
+export PROTO_HOME="$HOME/.proto";
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";

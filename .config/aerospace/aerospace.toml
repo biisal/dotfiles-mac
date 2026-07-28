@@ -99,7 +99,7 @@ on-mode-changed = []
             current_id=$(osascript -e "get id of application (path to frontmost application as text)")
 
             # Define our target Bundle IDs
-            ANTIGRAVITY="com.google.antigravity"
+            ANTIGRAVITY="com.google.antigravity-ide"
             ZED="dev.zed.Zed"
             KITTY="net.kovidgoyal.kitty"
 

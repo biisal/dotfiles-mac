@@ -4,15 +4,11 @@
       "editor.background": "#101218",
       "sideBar.background": "#1c1f29"
     },
-    "editorCursor.foreground": "#c0caf5",
-    "editorCursor.background": "#090B17",
-    "statusBarItem.errorBackground": "#c0caf5",
     "statusBar.background": "#005f5f",
     "statusBar.noFolderBackground": "#005f5f",
     "statusBar.debuggingBackground": "#005f5f",
     "statusBar.foreground": "#ffffff",
-    "statusBar.debuggingForeground": "#ffffff",
-    "terminal.background": "#00000000"
+    "statusBar.debuggingForeground": "#ffffff"
   },
   "editor.fontSize": 17,
   "editor.formatOnSave": true,
@@ -26,63 +22,113 @@
   "editor.lineNumbers": "relative",
   "vim.visualModeKeyBindingsNonRecursive": [
     {
-      "before": ["p"],
-      "after": ["P"],
+      "before": [
+        "p"
+      ],
+      "after": [
+        "P"
+      ],
     },
   ],
-  "vim.insertModeKeyBindingsNonRecursive": [
-    {
-      "before": ["j", "j"],
-      "after": ["<Esc>"],
-    },
-    {
-      "before": ["J", "J"],
-      "after": ["<Esc>"],
-    },
-  ],
+  // "vim.insertModeKeyBindingsNonRecursive": [
+  //   {
+  //     "before": ["j", "j"],
+  //     "after": ["<Esc>"],
+  //   },
+  //   {
+  //     "before": ["J", "J"],
+  //     "after": ["<Esc>"],
+  //   },
+  // ],
   "vim.leader": "<space>",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "f", "r"],
-      "commands": ["workbench.action.quickTextSearch"],
+      "before": [
+        "<leader>",
+        "f",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.quickTextSearch"
+      ],
       "comment": "Open the new floating Quick Search",
     },
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"],
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
       "comment": "Open the new floating Quick Search",
     },
     {
-      "before": ["K"],
-      "commands": ["editor.action.showHover"],
+      "before": [
+        "K"
+      ],
+      "commands": [
+        "editor.action.showHover"
+      ],
     },
     {
-      "before": ["<leader>", "f", "f"],
-      "commands": ["workbench.action.quickOpen"],
+      "before": [
+        "<leader>",
+        "f",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.quickOpen"
+      ],
+    },
+    // {
+    //   "before": [";"],
+    //   "after": [":"],
+    // },
+    {
+      "before": [
+        "<C-j>"
+      ],
+      "commands": [
+        "workbench.action.focusBelowGroup"
+      ],
     },
     {
-      "before": [";"],
-      "after": [":"],
+      "before": [
+        "<C-k>"
+      ],
+      "commands": [
+        "workbench.action.focusAboveGroup"
+      ],
     },
     {
-      "before": ["<C-j>"],
-      "commands": ["workbench.action.focusBelowGroup"],
+      "before": [
+        "<C-h>"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ],
     },
     {
-      "before": ["<C-k>"],
-      "commands": ["workbench.action.focusAboveGroup"],
+      "before": [
+        "<C-l>"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ],
     },
     {
-      "before": ["<C-h>"],
-      "commands": ["workbench.action.focusLeftGroup"],
-    },
-    {
-      "before": ["<C-l>"],
-      "commands": ["workbench.action.focusRightGroup"],
-    },
-    {
-      "before": ["<C-c>"],
-      "after": [":", "%", "y", "+", "<Enter>"],
+      "before": [
+        "<C-c>"
+      ],
+      "after": [
+        ":",
+        "%",
+        "y",
+        "+",
+        "<Enter>"
+      ],
     },
     {
       "editor.cursorSmoothCaretAnimation": "on",
@@ -100,28 +146,26 @@
   "eslint.codeActionsOnSave.rules": null,
   "antigravity.marketplaceGalleryItemURL": "https://marketplace.visualstudio.com/items",
   "antigravity.marketplaceExtensionGalleryServiceURL": "https://marketplace.visualstudio.com/_apis/public/gallery",
+  "go.alternateTools": {
+    "golangci-lint": "/opt/homebrew/bin/golangci-lint",
+  },
+  // 1. The Dedicated Linter (Runs on Save)
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.lintFlags": [],
+  // 2. The Lean gopls Setup (Runs on Type)
   "gopls": {
-    "staticcheck": true,
     "gofumpt": true,
     "completeUnimported": true,
     "analyses": {
       "unusedparams": true,
-      "shadow": true,
-      "unusedwrite": true,
-      "nilness": true,
       "useany": true,
-      "nonewvars": true,
       "simplifyrange": true,
     },
     "codelenses": {
       "generate": true,
-      "gc_details": true,
       "test": true,
       "tidy": true,
-      "vendor": true,
-      "regenerate_cgo": true,
-      "upgrade_dependency": true,
-      "run_govulncheck": true,
     },
   },
   // "go.lintOnSave": "package",
@@ -132,6 +176,7 @@
     "*": true,
     "markdown": true,
     "Log": true,
+    "prisma": true,
   },
   "vim.statusBarColorControl": true,
   "vim.statusBarColors.visualline": "",
@@ -158,7 +203,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "workbench.layoutControl.enabled": false,
   "python.languageServer": "None", // "basedpyright.analysis.typeCheckingMode": "strict",
-  "basedpyright.analysis.typeCheckingMode": "strict",
+  "basedpyright.analysis.typeCheckingMode": "basic",
   "basedpyright.analysis.inlayHints.variableTypes": true,
   "basedpyright.analysis.inlayHints.functionReturnTypes": true,
   "basedpyright.analysis.diagnosticSeverityOverrides": {
@@ -173,7 +218,11 @@
     "reportUnknownVariableType": "warning", // Yellow squiggles instead of red for inferred 'Any' types
     "reportUnknownArgumentType": "warning",
   },
-  "errorLens.excludeBySource": ["Codeium", "Windsurf", "Cascade"],
+  "errorLens.excludeBySource": [
+    "Codeium",
+    "Windsurf",
+    "Cascade"
+  ],
   "editor.inlayHints.enabled": "off",
   "editor.codeActionWidget.showHeaders": false,
   "pgFormatter.keepNewline": true,
@@ -181,7 +230,7 @@
   "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -191,12 +240,33 @@
   },
   "makefile.configureOnOpen": false,
   "editor.rulers": [
-    { "column": 80, "color": "#3a3937" },
-    { "column": 120, "color": "#571618" },
+    {
+      "column": 80,
+      "color": "#3a3937"
+    },
+    {
+      "column": 120,
+      "color": "#571618"
+    },
   ],
   "editor.codeLens": false,
   "editor.codeActionWidget.includeNearbyQuickFixes": false,
   "workbench.colorTheme": "Tokyo Night Gogh",
+  "ruff.configuration": "",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
+  "jdk.jdkhome": "/Users/avisek/Downloads/oracleJdk-26.jdk/Contents/Home",
+  "jdk.telemetry.enabled": false,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+  },
   //   "editor.defaultFormatter": "esbenp.prettier-vscode",
   // },
   // "[typescriptreact]": {

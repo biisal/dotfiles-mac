@@ -7,8 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-	"fast_scroll_sensitivity": 7.0,
-	"scroll_sensitivity": 2.0,
+	"diff_view_style": "split",
+	"fast_scroll_sensitivity": 1.0,
+	"scroll_sensitivity": 4.0,
 	"outline_panel": {
 		"dock": "left",
 	},
@@ -17,6 +18,9 @@
 	},
 	"agent_servers": {
 		"codex-acp": {
+			"default_config_options": {
+				"model": "gpt-5.5",
+			},
 			"type": "registry",
 		},
 		"crush": {
@@ -96,6 +100,13 @@
 		},
 	],
 	"lsp": {
+		"prisma-language-server": {
+			"settings": {
+				"prisma": {
+					"pinToPrisma6": true,
+				},
+			},
+		},
 		// "eslint": {
 		// 	"settings": {
 		// 		"codeActionOnSave": {
@@ -194,7 +205,7 @@
 		"font_weight": 500.0,
 	},
 	"ui_font_family": "Iosevka Nerd Font Mono",
-	"ui_font_weight": 700.0,
+	"ui_font_weight": 600.0,
 	"icon_theme": {
 		"mode": "light",
 		"light": "Material Icon Theme",
@@ -211,7 +222,7 @@
 	},
 	"disable_ai": false,
 	"agent_buffer_font_size": 14.0,
-	"agent_ui_font_size": 18.0,
+	"agent_ui_font_size": 17.0,
 	"expand_excerpt_lines": 16,
 	"agent": {
 		"sidebar_side": "left",
@@ -229,8 +240,8 @@
 	},
 	"hard_tabs": true,
 	"buffer_font_family": "Iosevka Nerd Font Mono",
-	"buffer_font_weight": 600.0,
-	"buffer_line_height": { "custom": 1.2 },
+	"buffer_font_weight": 500.0,
+	"buffer_line_height": { "custom": 1.4 },
 	"vim_mode": true,
 	"relative_line_numbers": "enabled",
 	"file_types": {
@@ -238,50 +249,54 @@
 		"python": ["*.py"],
 	},
 	"base_keymap": "VSCode",
-	"ui_font_size": 16.8,
-	"buffer_font_size": 18.0,
+	"ui_font_size": 15.8,
+	"buffer_font_size": 17.0,
 	"theme": {
-		"light": "Monokai Night Light",
+		"light": "Ayu Light",
 		"mode": "dark",
-		"dark": "Tokyo Night",
+		"dark": "Claude Code Inspired Dark",
 	},
-	"experimental.theme_overrides": {
-		"players": [
-			{
-				"selection": "#3D5564",
-				"cursor": "#A8F2F1",
-			},
-		],
-		"panel.background": "#090B17",
-		"surface.background": "#090B17",
-		"element.background": "#090B17", // Background of items in the tree
-		"element.hover": "#161b2e", // Subtle highlight when hovering over files
-		"element.active": "#3d59a1",
 
-		"ghost_element.selected": "#212d3d", // Faded steel blue
-		"ghost_element.hover": "#161e2a", // Very subtle lift
-		"ghost_element.active": "#2d3c52", // Slightly brighter for the "click"
+	// "experimental.theme_overrides": {
+	// 	"editor.background": "#0D1117",
+	// },
+	// "experimental.theme_overrides": {
+	// 	"players": [
+	// 		{
+	// 			"selection": "#3D5564",
+	// 			"cursor": "#A8F2F1",
+	// 		},
+	// 	],
+	// 	"panel.background": "#090B17",
+	// 	"surface.background": "#090B17",
+	// 	"element.background": "#090B17", // Background of items in the tree
+	// 	"element.hover": "#161b2e", // Subtle highlight when hovering over files
+	// 	"element.active": "#3d59a1",
 
-		"element.selected": "#2e3c64",
+	// 	"ghost_element.selected": "#212d3d", // Faded steel blue
+	// 	"ghost_element.hover": "#161e2a", // Very subtle lift
+	// 	"ghost_element.active": "#2d3c52", // Slightly brighter for the "click"
 
-		"background.appearance": "opaque",
-		"editor.background": "#090B17",
-		"editor.gutter.background": "#090B17",
-		"editor.hover_line_number": "#090B17",
-		"toolbar.background": "#090B17",
-		"status_bar.background": "#090B17",
-		"title_bar.background": "#090B17",
-		"pane.focused_border": "#3d59a1",
-		"terminal.background": "#090B17",
-		"terminal.foreground": "#a9b1d6",
+	// 	"element.selected": "#2e3c64",
 
-		"tab_bar.background": "#05060e",
-		"tab.active_background": "#161b2e",
-		"tab.inactive_background": "#090B17",
+	// 	"background.appearance": "opaque",
+	// 	"editor.background": "#090B17",
+	// 	"editor.gutter.background": "#090B17",
+	// 	"editor.hover_line_number": "#090B17",
+	// 	"toolbar.background": "#090B17",
+	// 	"status_bar.background": "#090B17",
+	// 	"title_bar.background": "#090B17",
+	// 	"pane.focused_border": "#3d59a1",
+	// 	"terminal.background": "#090B17",
+	// 	"terminal.foreground": "#a9b1d6",
 
-		"version_control.added": "#00ff00ff",
-		"version_control.deleted": "#ff0000ff",
-	},
+	// 	"tab_bar.background": "#05060e",
+	// 	"tab.active_background": "#161b2e",
+	// 	"tab.inactive_background": "#090B17",
+
+	// 	"version_control.added": "#00ff00ff",
+	// 	"version_control.deleted": "#ff0000ff",
+	// },
 
 	// "experimental.theme_overrides": {
 	//   "background": "#0C0C14BF",
